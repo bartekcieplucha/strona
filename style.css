@@ -9,10 +9,6 @@ body {
     background: #050a14;
     color: #b0c4de;
     min-height: 100vh;
-    background-image:
-        linear-gradient(rgba(59, 139, 235, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(59, 139, 235, 0.04) 1px, transparent 1px);
-    background-size: 50px 50px;
 }
 
 
