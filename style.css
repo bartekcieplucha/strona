@@ -1,19 +1,36 @@
 body {
     font-family: Arial;
+    margin: 0;
+    background: #f2f2f2;
+    color: #222;
 }
 
 #navbar {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background: #ffffff;
+}
+
+.nav-left,
+.nav-center,
+.nav-right {
+    display: flex;
+    gap: 10px;
 }
 
 .nav-btn {
-    padding: 10px;
-    margin: 5px;
-    display: inline-block;
-    border: 1px solid black;
+    padding: 8px 12px;
+    border: 1px solid #999;
     text-decoration: none;
-    color: black;
+    color: #222;
+    background: #e6e6e6;
+}
+
+.nav-btn:hover {
+    background: #d0d0d0;
 }
 
 #home {
@@ -33,9 +50,10 @@ body {
 .form-card,
 .ticket,
 .stat-card {
-    border: 1px solid black;
+    border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 10px;
+    background: #ffffff;
 }
 
 .form-row {
@@ -46,22 +64,27 @@ input,
 select,
 textarea {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     margin-top: 5px;
-    border: 1px solid black;
-}
-
-textarea {
-    height: 100px;
+    border: 1px solid #aaa;
+    background: #fff;
+    color: #222;
 }
 
 .btn,
 .filter-btn,
 .btn-sm {
-    padding: 10px;
-    border: 1px solid black;
-    background: white;
+    padding: 8px 10px;
+    border: 1px solid #999;
+    background: #e6e6e6;
     cursor: pointer;
+    color: #222;
+}
+
+.btn:hover,
+.filter-btn:hover,
+.btn-sm:hover {
+    background: #cfcfcf;
 }
 
 .ticket-title {
@@ -71,4 +94,6 @@ textarea {
 footer {
     text-align: center;
     padding: 20px;
+    border-top: 1px solid #ccc;
+    background: #ffffff;
 }
