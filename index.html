@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Zgłoszeń – Bartek Cieplucha</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+
+<nav id="navbar">
+    <a href="#home" class="nav-btn nav-link"><span>Strona główna</span></a>
+    <div class="nav-author">Bartek Cieplucha</div>
+    <a href="#tickets" class="nav-btn nav-link"><span>Zgłoszenia</span></a>
+</nav>
+
+<section id="home">
+    <div class="hero">
+        <img src="tytul.png" alt="System Zgłoszeń" class="hero-logo">
+        <p class="hero-sub">Dodawaj zgłoszenia, zmieniaj ich status i filtruj w jednym miejscu.</p>
+        <a href="#tickets" class="arrow-down">&#8595;</a>
+    </div>
+</section>
+
+<section id="tickets">
+
+    <div class="stats">
+        <div class="stat-card"><div class="stat-num" id="statNowe">0</div><div class="stat-label">Nowe</div></div>
+        <div class="stat-card"><div class="stat-num" id="statWtrakcie">0</div><div class="stat-label">W trakcie</div></div>
+        <div class="stat-card"><div class="stat-num" id="statZamkniete">0</div><div class="stat-label">Zamknięte</div></div>
+    </div>
+
+    <div class="form-card">
+        <h2>Nowe zgłoszenie</h2>
+        <form id="ticketForm">
+            <div class="form-row">
+                <input type="text" id="inputTitle" placeholder="Tytuł zgłoszenia" required>
+                <select id="inputPriority">
+                    <option value="normalny">Normalny</option>
+                    <option value="wysoki">Wysoki</option>
+                    <option value="krytyczny">Krytyczny</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <textarea id="inputDesc" placeholder="Opis problemu..." rows="3"></textarea>
+            </div>
+            <div class="form-row">
+                <button type="submit" class="btn">Dodaj zgłoszenie</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="filters">
+        <span class="filters-label">Filtruj:</span>
+        <button class="filter-btn active" data-filter="wszystkie">Wszystkie</button>
+        <button class="filter-btn" data-filter="nowe">Nowe</button>
+        <button class="filter-btn" data-filter="w trakcie">W trakcie</button>
+        <button class="filter-btn" data-filter="zamknięte">Zamknięte</button>
+    </div>
+
+    <div id="ticketList" class="ticket-list"></div>
+
+</section>
+
+<footer>
+    <p>Strona wykonana przez Bartłomieja Ciepluchę</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
