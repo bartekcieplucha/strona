@@ -175,52 +175,6 @@ function render() {
     }
 }
 
-var canvas = document.querySelector("#stars");
-var ctx = canvas.getContext("2d");
-var starList = [];
-
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
-
-resizeCanvas();
-
-window.addEventListener("resize", resizeCanvas);
-
-for (var i = 0; i < 80; i++) {
-    starList.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        size: Math.random() * 2 + 0.5,
-        speed: Math.random() * 1.5 + 0.3,
-        opacity: Math.random() * 0.6 + 0.2
-    });
-}
-
-function animateStars() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    for (var i = 0; i < starList.length; i++) {
-        var s = starList[i];
-        ctx.beginPath();
-        ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(59, 139, 235, " + s.opacity + ")";
-        ctx.fill();
-
-        s.y = s.y + s.speed;
-
-        if (s.y > canvas.height) {
-            s.y = 0;
-            s.x = Math.random() * canvas.width;
-        }
-    }
-
-    requestAnimationFrame(animateStars);
-}
-
-animateStars();
-
 document.querySelectorAll(".nav-link").forEach(function(link) {
     link.addEventListener("click", function(e) {
         e.preventDefault();
